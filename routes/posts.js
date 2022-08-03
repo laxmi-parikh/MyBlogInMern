@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
 /* GET post */
 router.get('/:id', async (req, res, next) => {
     // req.params contains the route parameters and the id is one of them
-     const post = await Post.findById(req.params.id);
+     const post = await Post.findById(req.params.id.toString());
      return res.status(200).json({
        statusCode: 200,
        message: 'Fetched post',

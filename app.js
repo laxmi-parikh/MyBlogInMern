@@ -17,10 +17,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // setup connection to mongo
-mongoose.connect(CONNECTION_STRING);
+/* mongoose.connect(CONNECTION_STRING);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
+ */
+
+mongoose.connect(CONNECTION_STRING, {
+
+  useNewUrlParser: true, 
+  
+  useUnifiedTopology: true 
+  
+  }, err => {
+  if(err) throw err;
+  console.log('Connected to MongoDB!!!')
+  });
+
 
 app.use(logger('dev'));
 app.use(express.json());

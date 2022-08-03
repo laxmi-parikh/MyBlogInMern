@@ -1,11 +1,14 @@
 {
+  
   "name": "mongo-blog",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start": "node ./bin/www",
-     "build-client": "cd ./client && yarn build"
+    
+    "build-client": "cd ./client && yarn build",
+    "build": "babel src -d lib"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,10 +22,11 @@
     "nodemon": "^2.0.19"
   },
   "nodemonConfig": {
-      "env": {
-        "CONNECTION_STRING": "mongodb+srv://laxmi:<mj@123>@mongo-blog-db.htzjdqb.mongodb.net/?retryWrites=true&w=majority"
-
-        
-      }
-   }
+    "env": {
+      "CONNECTION_STRING": "mongodb+srv://laxmi:DSUyBq0t9a0FO9vE@mongo-blog-db.htzjdqb.mongodb.net/?retryWrites=true&w=majority"
+    }
+  },
+  "devDependencies": {
+    "gh": "^2.8.9"
+  }
 }
