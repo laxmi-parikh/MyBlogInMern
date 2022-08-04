@@ -1,32 +1,90 @@
 {
   
   "name": "mongo-blog",
+  
   "version": "0.0.0",
+  
   "private": true,
+  
+  "homepage": "https://laxmi-parikh.github.io/My-BLOG/",
+  
   "scripts": {
-    "dev": "nodemon ./bin/www",
-    "start": "node ./bin/www",
+  
     
-    "build-client": "cd ./client && yarn build",
-    "build": "babel src -d lib"
+  "dev": "nodemon ./bin/www",
+  
+    
+  "start": "node ./bin/www",
+  
+    
+  "build-client": "cd ./client && yarn build",
+  
+    
+  "build": "babel src -d lib",
+  
+    
+  "predeploy": "npm run build",
+  
+    
+  "deploy": "gh-pages -d build"
+  
   },
+  
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "cors": "^2.8.5",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "mongoose": "^6.5.0",
-    "morgan": "~1.9.1",
-    "nodemon": "^2.0.19"
+  
+    
+  "babel-loader": "^8.2.5",
+  
+    
+  "cookie-parser": "~1.4.4",
+  
+    
+  "cors": "^2.8.5",
+  
+    
+  "debug": "~2.6.9",
+  
+    
+  "express": "~4.16.1",
+  
+    
+  "gh-pages": "^4.0.0",
+  
+    
+  "http-errors": "~1.6.3",
+  
+    
+  "jade": "~1.11.0",
+  
+    
+  "mongoose": "^6.5.0",
+  
+    
+  "morgan": "~1.9.1",
+  
+    
+  "nodemon": "^2.0.19"
+  
   },
+  
   "nodemonConfig": {
-    "env": {
-      "CONNECTION_STRING": "mongodb+srv://laxmi:DSUyBq0t9a0FO9vE@mongo-blog-db.htzjdqb.mongodb.net/?retryWrites=true&w=majority"
-    }
+  
+    
+  "env": {
+  
+    
+    
+  "CONNECTION_STRING": "mongodb+srv://laxmi:DSUyBq0t9a0FO9vE@mongo-blog-db.htzjdqb.mongodb.net/?retryWrites=true&w=majority"
+  
+    
+  }
+  
   },
+  
   "devDependencies": {
-    "gh": "^2.8.9"
+  
+    
+  "gh": "^2.8.9"
+  
   }
 }
